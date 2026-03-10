@@ -11,7 +11,7 @@ Simulate the Day: * At the very bottom of your code, call your functions in what
 Open your terminal and run your program!
 */
 
-pet = {
+const pet = {
     petName: "Fluffy",
     energy: 50,
     hunger: 50,
