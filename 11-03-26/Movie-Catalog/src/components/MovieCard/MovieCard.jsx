@@ -1,13 +1,15 @@
 
 
-const MovieCard = (movie) => {
+const MovieCard = (props) => {
+
+    const {title, director, year, rating} = props.movie;
 
     return (
         <div>
-            <h2>{movie.title}</h2>
-            <p>Directed by: {movie.director}</p>
-            <p>Year: {movie.year}</p>
-            <p>Rating: {movie.rating}</p>
+            <h2>{title}</h2>
+            <p>Directed by: {director}</p>
+            <p>Year: {year}</p>
+            <p>Rating: {rating}</p>
         </div>
     )
 }

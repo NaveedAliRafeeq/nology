@@ -1,7 +1,9 @@
 import MovieCard from "../../components/MovieCard/MovieCard"
+import movieData from "../../data/movieData"
 
 const MovieList = () => {
     
+    /* What I did on 11/03/26, before learning about .map() method
     const movieData = [
       {
         id: 1,
@@ -21,6 +23,12 @@ const MovieList = () => {
         director: "Anthony C. Ferrante",
         year: 2013,
         rating: 3.3,
+      }, {
+        id: 4,
+        title: "The Matrix 2",
+        director: "The Wachowskis",
+        year: 2001,
+        rating: 8.1,
       } ];
 
     const movies = [];
@@ -29,10 +37,17 @@ const MovieList = () => {
         movies.push(<MovieCard title={movieData[i].title} director={movieData[i].director} 
             year={movieData[i].year} rating={movieData[i].rating}/>);
     }
+    */
+   
+   // What I did on 12/03/26, after learning about .map() method
+   const mappedMovies = movieData.map(item => {
+       return <MovieCard movie = {item} />
+   })
+
 
     return (
         <div>
-            {movies}
+            {mappedMovies}
         </div>
     )
 }
