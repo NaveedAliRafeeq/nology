@@ -1,0 +1,37 @@
+.todo-app {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 20px;
+    background: #1f1f1f;
+
+    &__card {
+        width: 100%;
+        max-width: 500px;
+        background: #ffffff;
+        border: 2px solid #ffffff;
+        border-radius: 12px;
+        padding: 24px;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+
+        h1 {
+            font-size: 2rem;
+            color: #000;
+        }
+    }
+
+    &__reset-btn {
+        padding: 8px 14px;
+        border: 2px solid #000;
+        background: #ffffff;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+}
