@@ -1,8 +1,8 @@
 
 
-const MovieCard = (props) => {
+const MovieCard = (props, handleDelete) => {
 
-    const {title, director, year, rating} = props.movie;
+    const {id, title, director, year, rating} = props.movie;
 
     return (
         <div>
@@ -10,6 +10,7 @@ const MovieCard = (props) => {
             <p>Directed by: {director}</p>
             <p>Year: {year}</p>
             <p>Rating: {rating}</p>
+            <button onClick={() => handleDelete(id)}>Delete Movie</button>
         </div>
     )
 }

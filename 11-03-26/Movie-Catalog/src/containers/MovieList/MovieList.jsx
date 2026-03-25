@@ -1,5 +1,7 @@
 import MovieCard from "../../components/MovieCard/MovieCard"
 import movieData from "../../data/movieData"
+import ReactDOM from "react-dom";
+import { useState } from 'react';
 
 const MovieList = () => {
     
@@ -38,10 +40,17 @@ const MovieList = () => {
             year={movieData[i].year} rating={movieData[i].rating}/>);
     }
     */
+
+   const [movieData, setMovieData] = useState(movieData);
+
+   const handleDelete = (id) => {
+        const newMovie = movieData.filter(movie => movie.id !== id);
+        setMovieData(newMovie);
+   }
    
    // What I did on 12/03/26, after learning about .map() method
    const mappedMovies = movieData.map(item => {
-       return <MovieCard movie = {item} />
+       return <MovieCard movie = {item} handleDelete = {handleDelete} />
    })
 
 
