@@ -4,7 +4,7 @@
   "description": "my first api",
   "license": "ISC",
   "author": "Naveed Rafeeq",
-  "type": "commonjs",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,12 @@
     "eslint": "^10.1.0"
   },
   "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "env": "^0.0.2",
     "express": "^5.2.1",
+    "mongodb": "^7.1.1",
+    "mongoose": "^9.3.3",
     "nodemon": "^3.1.14"
   }
 }

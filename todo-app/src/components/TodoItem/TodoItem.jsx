@@ -3,9 +3,9 @@ import './TodoItem.scss';
 const TodoItem = ({ todo, onDeleteTodo }) => {
   return (
     <div className="todo-item">
-      <span className="todo-item__text">{todo.text}</span>
+      <span className="todo-item__text">{todo.task}</span>
 
-      <button
+      <button type="button"
         className="todo-item__delete-btn"
         onClick={() => onDeleteTodo(todo.id)}
       >
